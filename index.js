@@ -123,7 +123,7 @@ async function run() {
             const option = { upsert: true }
             const updateDoc = {
                 $set: {
-                    name: user.name,
+                    name: user.displayName,
                     email: user.email
                 }
             }
