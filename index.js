@@ -21,13 +21,13 @@ async function run() {
         const usersCollection = database.collection('users');
         const commentsCollection = database.collection('comments');
 
-        // // doctor insert
-        // app.post('/doctors', async (req, res) => {
-        //     const doctor = req.body
-        //     const result = await doctorsCollection.insertOne(doctor);
+        // Blogs insert
+        app.post('/blogs', async (req, res) => {
+            const blog = req.body
+            const result = await blogsCollection.insertOne(blog);
 
-        //     res.json(result)
-        // })
+            res.json(result)
+        })
         // //appointment
         // app.post('/placeappointment', async (req, res) => {
         //     const appointment = req.body
