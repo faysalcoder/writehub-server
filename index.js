@@ -63,12 +63,12 @@ async function run() {
 
         //     res.json(result)
         // })
-        // //Get doctors Data
-        // app.get('/doctors', async (req, res) => {
-        //     const cursor = doctorsCollection.find({});
-        //     const result = await cursor.toArray();
-        //     res.send(result)
-        // })
+        //Get doctors Data
+        app.get('/blogs', async (req, res) => {
+            const cursor = blogsCollection.find({});
+            const result = await cursor.toArray();
+            res.send(result)
+        })
         // // Get appointments Data
         // app.get('/appointments', async (req, res) => {
         //     const cursor = appointmentsCollection.find({});
