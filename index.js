@@ -87,14 +87,14 @@ async function run() {
             const result = await cursor.toArray();
             res.send(result)
         })
-        // // Find Place appointment Data
-        // app.get('/placeappointment/:id', async (req, res) => {
-        //     const id = req.params.id
+        // Find Place appointment Data
+        app.get('/blogs/:id', async (req, res) => {
+            const id = req.params.id
 
-        //     const query = { _id: ObjectId(id) }
-        //     const result = await doctorsCollection.findOne(query)
-        //     res.json(result)
-        // })
+            const query = { _id: ObjectId(id) }
+            const result = await blogsCollection.findOne(query)
+            res.json(result)
+        })
         // //Admin Identify
 
         app.get('/users/:email', async (req, res) => {
