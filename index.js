@@ -158,20 +158,20 @@ async function run() {
         //     const result = await doctorsCollection.updateOne(filter, updateDoc)
         //     res.json(result)
         // })
-        // app.put('/appointments/confirm', async (req, res) => {
+        app.put('/blogs/confirm', async (req, res) => {
 
-        //     const { appointmentId } = req.body
+            const { blogId } = req.body
 
-        //     const filter = { _id: ObjectId(appointmentId) }
+            const filter = { _id: ObjectId(blogId) }
 
-        //     const updateDoc = {
-        //         $set: {
-        //             status: true
-        //         }
-        //     }
-        //     const result = await appointmentsCollection.updateOne(filter, updateDoc)
-        //     res.json(result)
-        // })
+            const updateDoc = {
+                $set: {
+                    status: true
+                }
+            }
+            const result = await blogsCollection.updateOne(filter, updateDoc)
+            res.json(result)
+        })
 
         // app.put('/reviews/confirm', async (req, res) => {
 
