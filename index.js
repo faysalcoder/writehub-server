@@ -188,12 +188,12 @@ async function run() {
         //     res.json(result)
         // })
 
-        // app.delete('/doctors/:id', async (req, res) => {
-        //     const id = req.params.id;
-        //     const query = { _id: ObjectId(id) }
-        //     const result = await doctorsCollection.deleteOne(query)
-        //     res.json(result)
-        // })
+        app.delete('/blogs/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) }
+            const result = await blogsCollection.deleteOne(query)
+            res.json(result)
+        })
         // app.delete('/reviews/:id', async (req, res) => {
         //     const id = req.params.id;
         //     const query = { _id: ObjectId(id) }
