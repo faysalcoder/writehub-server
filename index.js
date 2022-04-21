@@ -75,6 +75,11 @@ async function run() {
             const result = await cursor.toArray();
             res.send(result)
         })
+        app.get('/comments', async (req, res) => {
+            const cursor = commentsCollection.find({});
+            const result = await cursor.toArray();
+            res.send(result)
+        })
         // // Get appointments Data
         // app.get('/appointments', async (req, res) => {
         //     const cursor = appointmentsCollection.find({});
