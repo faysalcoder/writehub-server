@@ -28,6 +28,12 @@ async function run() {
 
             res.json(result)
         })
+        app.post('/comments', async (req, res) => {
+            const comment = req.body
+            const result = await commentsCollection.insertOne(comment);
+
+            res.json(result)
+        })
         // //appointment
         // app.post('/placeappointment', async (req, res) => {
         //     const appointment = req.body
